@@ -8,26 +8,33 @@ export const GlobalStyle = createGlobalStyle`
 
  @font-face {
         font-family: 'Helvetica';
+        font-display: swap;
         src: local('HelveticaRegular'),
-        url(${HelveticaRegular}) format('truetype');
+        url(${HelveticaRegular}) format('ttf');
         font-weight: 400;
         font-style: normal;
 }
 
 @font-face {
         font-family: 'Helvetica';
+        font-display: swap;
         src: local('HelveticaMedium'),
-        url(${HelveticaMedium}) format('truetype');
+        url(${HelveticaMedium}) format('ttf');
         font-weight: 500;
         font-style: normal;
 }
 
 @font-face {
         font-family: 'Helvetica';
+        font-display: swap;
         src: local('HelveticaBold'),
-        url(${HelveticaBold}) format('truetype');
+        url(${HelveticaBold}) format('ttf');
         font-weight: 700;
         font-style: normal;
+}
+
+html {
+  box-sizing: border-box;
 }
 
 body {
@@ -35,10 +42,15 @@ body {
   letter-spacing: 0.02em;
   line-height: 1.5;
   font-size: 16px;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; 
   margin: 0; 
   padding: 0;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
   /* padding: ${p => p.theme.spasing(4)};
   color: ${p => p.theme.colors.main};   */
 }
@@ -87,5 +99,11 @@ button {
     border: none;
     background-color: transparent;
     padding: 0;
+}
+
+.container {
+  width: 1440px;
+  padding: 0 32px;
+  margin: 0 auto;
 }
 `;
