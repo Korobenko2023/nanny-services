@@ -1,19 +1,17 @@
 export const theme = {
-    colors: {    
-    button: '#e44848',
-    darkRed: "#DC143C",
-    main: '#101828',
-    inputs: 'f7f7f7',
-    features: '#f2f4f7',
-    rating: '#ffc531',    
-    text: '#475467',
-    Indigo: "#4B0082",     
-    yellow: "#FFFF00",
-    lightBlue: "#97d3e6",
-    white: "#FFFFFF",
-    transparent: "transparent",
-    mainBackground: ['linear-gradient(to top, #0f2027, #203a43, #2c5364)'],
-    imageBackground: ['red', 'linear-gradient (90deg, #ff9966,#ff5e62'],           
+  colors: {  
+    white: "#FBFBFB",
+    blue: "#0957C3",
+    lightblue: "rgba(9, 87, 195, 0.2)",
+    textBlack: "#11101C",
+    textGray: "rgba(17, 16, 28, 0.5)",
+    border: "rgba(251, 251, 251, 0.4)",
+    inputBorder: "rgba(17, 16, 28, 0.1)",
+    green: "#38CD3E",
+    timeColor: "rgba(17, 16, 28, 0.3)",
+    avatarBorder: "rgba(240, 63, 59, 0.2)",
+    grayBackgraund: "#f3f3f3",
+    gold: "#FFC531",
     },
 
     radii: {

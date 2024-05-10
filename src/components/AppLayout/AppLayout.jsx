@@ -5,10 +5,11 @@ import { Outlet } from "react-router-dom";
 export const AppLayout = () => {
   return (
      <>      
-      <nav/>     
+      <main>     
         <Suspense fallback={<div />}>
           <Outlet />
-        </Suspense>        
+        </Suspense> 
+      </main>
         <Toaster position="top-right" reverseOrder={false}/>     
     </>
   );

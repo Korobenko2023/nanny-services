@@ -1,7 +1,9 @@
 export default function Home() {
     return (
         <div>
-            <h1>Our campers to rent for your amazing trip!</h1>
+            <h1>Make Life Easier for the Family:
+                <p>Find Babysitters Online for All Occasions</p>
+            </h1>
         </div>
     );
 }
