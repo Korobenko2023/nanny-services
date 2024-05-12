@@ -1,9 +1,15 @@
+import { HomeDiv } from "./Home.styled";
+// import { HeaderWrapper } from "../../components/Header/header.styled";
+
 export default function Home() {
     return (
-        <div>
-            <h1>Make Life Easier for the Family:
+        <>
+            <HomeDiv>
+            {/* <h1>Make Life Easier for the Family:
                 <p>Find Babysitters Online for All Occasions</p>
-            </h1>
-        </div>
+            </h1> */}
+            </HomeDiv>
+        </>
+        
     );
 }

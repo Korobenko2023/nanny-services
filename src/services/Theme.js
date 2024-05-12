@@ -15,28 +15,11 @@ export const theme = {
     },
 
     radii: {
-        sm: "4px",
-        md: "10px",
-        lg: "16px",
-    },
-
-    fontSizes: {
-    small: '14px',
-    medium: '18px',
-    large: '22px',
-    xl: '30px',
-    xxl: '34px',
-    xxxl: '42px',
+        sm: "13px",
+        md: "20px",
+        lg: "30px",
     },
     
-    breakpoints: {
-    xs: '320px',
-    s: '768px',
-    m: '1024px',
-    l: '1280px',
-    xl: '1440px',
-  },
-
   animations: {
     cubicBezier: '0.25s cubic-bezier(0.7, 0.98, 0.86, 0.98)',
   },

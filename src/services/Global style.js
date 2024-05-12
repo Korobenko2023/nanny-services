@@ -51,8 +51,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  /* padding: ${p => p.theme.spasing(4)};
-  color: ${p => p.theme.colors.main};   */
+  color: ${p => p.theme.colors.textGray};  
 }
 
 code {
@@ -99,11 +98,5 @@ button {
     border: none;
     background-color: transparent;
     padding: 0;
-}
-
-.container {
-  width: 1440px;
-  padding: 0 32px;
-  margin: 0 auto;
 }
 `;
