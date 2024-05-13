@@ -2,19 +2,13 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const HeaderNav = styled.header`
- position: relative;
+  position: relative;
   max-width: 1376px;
-  /* top: 0;
-  left: 0;
-  position: absolute;
-  z-index: 2; */
 `;
 
 export const HeaderContainer = styled.div`
+  position: absolute; 
   z-index: 2;
-  /* top: 0;
-  right: auto;
-  left: auto; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -22,18 +16,10 @@ export const HeaderContainer = styled.div`
   padding: ${p => p.theme.spasing(5)};
   border-bottom: 1px solid;
   border-color: ${(p) => p.theme.colors.border};
-  background-color: ${(p) => p.theme.colors.blue};
-  position: absolute; 
 
   @media screen and (min-width: 1024px) {
     padding: 20px 96px;
   }
-  /* display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: ${p => p.theme.spasing(5)} ${p => p.theme.spasing(24)};
-  border-bottom: 1px solid;
-  border-color: ${(p) => p.theme.colors.border}; */
 `;
 
 export const HeaderLogo = styled(Link)`
@@ -76,4 +62,68 @@ export const HeaderLink = styled(Link)`
   letter-spacing: -0.01em;
   color: ${(p) => p.theme.colors.white};
 `;
+
+export const ButtonWrapper = styled.ul`
+  display: flex;
+  align-items: center;
+  gap: ${p => p.theme.spasing(2)};
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`;
+
+export const LogInButton = styled.button`
+  border: 1px solid;
+  border-color: ${(p) => p.theme.colors.border};
+  background-color: transparent;
+  border-radius: 30px;
+  padding: ${p => p.theme.spasing(3)} ${p => p.theme.spasing(9)};
+  max-width: 124px;
+  height: 48px;
+  letter-spacing: -0.01em;
+  color: ${(p) => p.theme.colors.white};
+  transition:  color 250ms ${(p) => p.theme.transition},
+    background-color 250ms ${(p) => p.theme.transition};
+
+  &:hover,
+  &:focus {
+    color: ${(p) => p.theme.colors.blue};
+    background-color: ${(p) => p.theme.colors.white};
+  }
+
+  @media screen and (max-width: 1024px) {
+    font-size: 14px;
+    line-height: 1;
+    padding: ${p => p.theme.spasing(3)} ${p => p.theme.spasing(9)};
+  }
+
+  @media screen and (max-width: 720px) {
+    padding: ${p => p.theme.spasing(3)} ${p => p.theme.spasing(6)};
+  }
+`;
+
+export const RegisterButton = styled.button`
+  border: 1px solid;
+  border-color: transparent;
+  background-color: ${(p) => p.theme.colors.blue};
+  border-radius: 30px;
+  padding: ${p => p.theme.spasing(3)} ${p => p.theme.spasing(9)};
+  max-width: 168px;
+  height: 48px;
+  letter-spacing: -0.01em;
+  color: ${(p) => p.theme.colors.white};
+  transition:  color 250ms ${(p) => p.theme.transition},
+    background-color 250ms ${(p) => p.theme.transition};
+
+  &:hover,
+  &:focus {
+    color: ${(p) => p.theme.colors.blue};
+    background-color: ${(p) => p.theme.colors.white};
+  }
+`;
+
+
+
+
 

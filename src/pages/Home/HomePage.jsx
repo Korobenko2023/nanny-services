@@ -1,15 +1,17 @@
-import { HomeDiv } from "./Home.styled";
-// import { HeaderWrapper } from "../../components/Header/header.styled";
+import { HomeDiv, LinkHome, TextDiv, TextHome, TitleHome } from "./Home.styled";
 
 export default function Home() {
-    return (
-        <>
-            <HomeDiv>
-            {/* <h1>Make Life Easier for the Family:
-                <p>Find Babysitters Online for All Occasions</p>
-            </h1> */}
-            </HomeDiv>
-        </>
-        
-    );
+    return (   
+        <HomeDiv>
+            <TextDiv>
+                <TitleHome>Make Life Easier for the Family:</TitleHome>
+                <TextHome>Find Babysitters Online for All Occasions</TextHome>
+                <LinkHome to="/nannies">
+                    Get started
+                </LinkHome>   
+                     
+            </TextDiv>
+        </HomeDiv>      
+    );    
 }
+    

@@ -1,4 +1,4 @@
-import { HeaderContainer, HeaderLink, HeaderLogo, HeaderNav, LinkWrapper, NavWrapper } from "./header.styled";
+import { ButtonWrapper, HeaderContainer, HeaderLink, HeaderLogo, HeaderNav, LinkWrapper, LogInButton, NavWrapper, RegisterButton } from "./Header.styled";
 
 export const Header = () => {
   return (
@@ -10,14 +10,14 @@ export const Header = () => {
                       <HeaderLink to="/">Home</HeaderLink>
                       <HeaderLink to="/nannies">Nannies</HeaderLink>
                   </NavWrapper>
-                  <ul>
+                  <ButtonWrapper>
                       <li>
-                          <button type="button">Log In</button>
+                          <LogInButton type="button">Log In</LogInButton>
                       </li>
                       <li>
-                          <button type="button">Registration</button>                          
+                          <RegisterButton type="button">Registration</RegisterButton>                          
                       </li>
-                  </ul>
+                  </ButtonWrapper>
               </LinkWrapper>  
           </HeaderContainer>  
       </HeaderNav>

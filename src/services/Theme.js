@@ -12,6 +12,7 @@ export const theme = {
     avatarBorder: "rgba(240, 63, 59, 0.2)",
     grayBackgraund: "#f3f3f3",
     gold: "#FFC531",
+    gradient: "rgba(18, 20, 23, 0.6)",
     },
 
     radii: {
