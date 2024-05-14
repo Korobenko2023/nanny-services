@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const HeaderNav = styled.header`
@@ -18,7 +18,7 @@ export const HeaderContainer = styled.div`
   border-color: ${(p) => p.theme.colors.border};
 
   @media screen and (min-width: 1024px) {
-    padding: 20px 96px;
+    padding: ${p => p.theme.spasing(5)} ${p => p.theme.spasing(24)};
   }
 `;
 
@@ -37,14 +37,14 @@ export const HeaderLogo = styled(Link)`
 export const LinkWrapper = styled.div`
   display: flex;
   align-items: center;
-  gap: 92px;
+  gap: ${p => p.theme.spasing(24)};
 
   @media screen and (max-width: 1024px) {
-    gap: 48px;
+    gap: ${p => p.theme.spasing(12)};
   }
 
   @media screen and (max-width: 768px) {
-    gap: 20px;
+    gap: ${p => p.theme.spasing(5)};
   }
 `;
 
@@ -54,13 +54,27 @@ export const NavWrapper = styled.nav`
   gap: ${p => p.theme.spasing(10)};
 `;
 
-export const HeaderLink = styled(Link)`
+export const HeaderLink = styled(NavLink)`
   position: relative;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: -0.01em;
   color: ${(p) => p.theme.colors.white};
+  margin-bottom: 4px;
+
+   &.active::after {
+    content: " ";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;   
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: ${(p) => p.theme.colors.white};
+    border-radius: 50%;
+    transition: transform ${(p) => p.theme.transition};
+  }  
 `;
 
 export const ButtonWrapper = styled.ul`
@@ -83,8 +97,8 @@ export const LogInButton = styled.button`
   height: 48px;
   letter-spacing: -0.01em;
   color: ${(p) => p.theme.colors.white};
-  transition:  color 250ms ${(p) => p.theme.transition},
-    background-color 250ms ${(p) => p.theme.transition};
+  transition:  color ${(p) => p.theme.transition},
+    background-color ${(p) => p.theme.transition};
 
   &:hover,
   &:focus {
