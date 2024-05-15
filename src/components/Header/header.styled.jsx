@@ -72,7 +72,7 @@ export const HeaderLink = styled(NavLink)`
     width: 8px;
     height: 8px;
     background-color: ${(p) => p.theme.colors.white};
-    border-radius: 50%;
+    border-radius: ${(p) => p.theme.radii.xl};
     transition: transform ${(p) => p.theme.transition};
   }  
 `;
@@ -91,7 +91,7 @@ export const LogInButton = styled.button`
   border: 1px solid;
   border-color: ${(p) => p.theme.colors.border};
   background-color: transparent;
-  border-radius: 30px;
+  border-radius: ${(p) => p.theme.radii.lg};
   padding: ${p => p.theme.spasing(3)} ${p => p.theme.spasing(9)};
   max-width: 124px;
   height: 48px;
@@ -121,7 +121,7 @@ export const RegisterButton = styled.button`
   border: 1px solid;
   border-color: transparent;
   background-color: ${(p) => p.theme.colors.blue};
-  border-radius: 30px;
+  border-radius: ${(p) => p.theme.radii.lg};
   padding: ${p => p.theme.spasing(3)} ${p => p.theme.spasing(9)};
   max-width: 168px;
   height: 48px;

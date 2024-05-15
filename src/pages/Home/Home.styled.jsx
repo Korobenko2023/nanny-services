@@ -57,31 +57,43 @@ export const TextHome = styled.p`
   }
 `;
 
-export const LinkHome = styled(Link)`
-  position: relative;
-  display: inline-block;
-  width: 231px;
-  height: 60px;
-  padding: ${p => p.theme.spasing(4)} ${p => p.theme.spasing(12)};
-  gap: 18px;
-  background-color: transparent;
-  border: 1px solid;
-  border-color: ${(p) => p.theme.colors.border};
-  border-radius: 30px;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
-  color: ${(p) => p.theme.colors.white};
-`;
-
-export const HomeSvg = styled.svg`
+export const ArrowUp = styled.svg`
   position: absolute;
   top: 22px;
   right: 45px;
-  width: 15px;
-  height: 17px;
-  transition: transform 250ms ${(p) => p.theme.transition};
+  width: 13px;
+  height: 15px;
+  transition: opacity ${(p) => p.theme.transition};
+`;
+
+export const Arrow = styled(ArrowUp)`
+  width: 19px;
+  height: 15px;
+  right: 40px;
+  opacity: 0;
+`;
+
+export const LinkHome = styled(Link)`
+  position: relative;
+  display: block;
+  width: 231px;
+  height: 60px;
+  padding: 18px 50px;
+  border: 1px solid;
+  border-color: ${(p) => p.theme.colors.border};
+  border-radius: ${(p) => p.theme.radii.lg};
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: ${(p) => p.theme.colors.white};
+
+   &:hover ${ArrowUp}, &:focus ${ArrowUp} {
+    opacity: 0;
+  }
+
+  &:hover ${Arrow}, &:focus ${Arrow} {
+    opacity: 1;
+  }
 `;
 
 export const StatBlock = styled.div`
@@ -93,7 +105,7 @@ export const StatBlock = styled.div`
   width: 284px;
   height: 118px;
   padding: ${p => p.theme.spasing(8)}; 
-  border-radius: 20px;
+  border-radius: ${(p) => p.theme.radii.md};
   background-color: ${(p) => p.theme.colors.white};
 
   @media screen and (max-width: 1024px) {
@@ -112,7 +124,7 @@ export const CheckBlock = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 13px;
+  border-radius: ${(p) => p.theme.radii.sm};
   width: 54px;
   height: 54px;
   background-color: ${(p) => p.theme.colors.blue};
@@ -142,9 +154,4 @@ export const StatCount = styled.p`
   letter-spacing: normal;
   line-height: 1;
   color: ${(p) => p.theme.colors.textBlack};
-`;
-
-
-
-
-  
+`;  
